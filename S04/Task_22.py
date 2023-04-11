@@ -6,23 +6,36 @@
 spisk1 = []
 spisk2 = []
 
-n = int(input('Введите количество чисел в первом множестве: '))
+from random import randint
 
-print('Заполните первый список: ')
-for i in range(n):
-    spisk1.append(input(f'Элемент {i+1}: '))
+n = int(input('Введите количество чисел в первом множестве: '))
+spisk1 = [randint(1, 10) for i in range(n)]
+print(*spisk1)
+
+# Если заполнять множества вручную (список 1)
+# print('Заполните первый список: ')
+# for i in range(n):
+#     spisk1.append(input(f'Элемент {i+1}: '))
 
 m = int(input('Введите количество чисел во втором множестве: '))
+spisk2 = [randint(1, 10) for i in range(m)]
+print(*spisk2)
 
-print('Заполните второй список: ')
-for i in range(m):
-    spisk2.append(input(f'Элемент {i+1}: '))
+# Если заполнять множества вручную (список 2)
+# print('Заполните второй список: ')
+# for i in range(m):
+#     spisk2.append(input(f'Элемент {i+1}: '))
 
 kort1 = set(spisk1)
 kort2 = set(spisk2)
 
 qwert = kort1.intersection(kort2)
-print(qwert)
+print(*qwert)
+# qwert = list(qwert)
+
+
+# qwert.sort(reverse=False)
+# print(f'sort {qwert}')
 
 
 
